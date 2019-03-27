@@ -14,7 +14,7 @@
         android:elevation="3dp"
         android:layout_alignParentBottom="true"
         android:text="Hola"
-        android:background="@drawable/my_bubble"
+        android:background="@drawable/bot_bubble"
         android:textSize="20sp"/>
 
 

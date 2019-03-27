@@ -11,24 +11,38 @@
         android:id="@+id/conversation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/userInput"
-
+        android:layout_above="@+id/inputField"
         tools:ignore="UnknownId" />
 
-    <EditText
-        android:imeActionId="4"
-        android:imeOptions="actionSend"
-        android:id="@+id/userInput"
-        android:fontFamily="@font/montserrat"
-        android:background="@drawable/bg_edit_text"
-        android:textSize="20sp"
-        android:layout_margin="8dp"
-        android:padding="15dp"
-        android:elevation="3dp"
-        android:hint="Ask the Bot."
-        android:textColor="#fff"
-        android:textColorHint="#fff"
+    <LinearLayout
+        android:id="@+id/inputField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/userInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="8"
+            android:background="@drawable/bg_edit_text"
+            android:elevation="3dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="Ask the Bot."
+            android:imeActionId="4"
+            android:imeOptions="actionSend"
+            android:padding="15dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Send" />
+    </LinearLayout>
 </RelativeLayout>
